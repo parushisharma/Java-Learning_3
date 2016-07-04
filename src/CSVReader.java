@@ -1,6 +1,10 @@
 
 public class CSVReader {
 
+	public CSVReader(String fILENAME) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public static void main(String[] args) {
 		
 
@@ -19,6 +23,11 @@ public class CSVReader {
 	public double[][] getParsedTable() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public int getNumberOfYears() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
