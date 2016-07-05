@@ -40,7 +40,7 @@ public class TestCSVReader
 		
 
 		datatable = new CellularData(numRows, numColumns, startingYear);
-		
+		System.out.print(datatable);
 
 		// From the array that stores parsed information,
 		// add one country at a time to an object of type CellularData.
