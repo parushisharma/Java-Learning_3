@@ -2,7 +2,7 @@
  *  Tests the CSVReader class, which reads input from a CSV file. Uses
  *  the attributes stored in CSVReader object to fill the CellularData class.
  *
- * @author Foothill College, [YOUR NAME HERE]
+ * @author Foothill College, Parushi Sharma
  */
 public class TestCSVReader
 {
@@ -15,7 +15,7 @@ public class TestCSVReader
 	{	
 		// NOTE: Make sure to use relative path instead of specifying the entire path 
 		// (such as /Users/alicew/myworkspace/so_on_and_so_forth).
-		final String FILENAME = "resources/cellular.csv";	// Directory path for Mac OS X
+		final String FILENAME = "/Users/parushi/git/parushis-project03/resources/cellular_short.csv";	// Directory path for Mac OS X
 		//final String FILENAME = "resources\\cellular.csv";	// Directory path for Windows OS (i.e. Operating System)
 
 		// TODO: Create the class CSVReader to parse the CSV data file
@@ -37,17 +37,17 @@ public class TestCSVReader
 		int numRows = parsedTable.length;
 		int numColumns = parser.getNumberOfYears();
 		int startingYear = yearLabels[0];
+		
 
 		datatable = new CellularData(numRows, numColumns, startingYear);
+		
 
 		// From the array that stores parsed information,
 		// add one country at a time to an object of type CellularData.
-		for (int countryIndex = 0; countryIndex < countryNames.length; countryIndex++)
-		{
+		for (int countryIndex = 0; countryIndex < countryNames.length; countryIndex++) {
 			double [] countryData = parsedTable[countryIndex];
 			datatable.addCountry(countryNames[countryIndex], countryData);					
 		}
-
 
 		System.out.printf(countryNames[0] + " (1960 to 2012): %.2f \n", datatable.getNumSubscriptionsInCountryForPeriod(countryNames[0],1960,2012));
 		// the output is: 

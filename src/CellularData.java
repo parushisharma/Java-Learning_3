@@ -20,7 +20,7 @@ public class CellularData {
 	public void addCountry(String country, double []num) {
 		for(int i = 0; i<table.length;i++) { // read through the table    
 			if(table[i][0] == null) {    // create check to see if the first row is empty
-				addCountry(country, num, i);  //inserts the data by using helper method 
+				addCountryHelper(country, num, i);  //inserts the data by using helper method 
 				break;
 			}
 		}
@@ -28,10 +28,10 @@ public class CellularData {
 	
 	// This is a helper method that is private to the client. 
 	// It inserts the data into the table
-	private void addCountry(String country, double []num, int row) {
+	private void addCountryHelper(String country, double []num, int row) {
 		table[row][0] = country; // the country name given should be in the 0th row. 
 		for(int j = 1;j < table[row].length;j++) { // read through the row 
-			table[row][j] = num[j-1]; 
+			this.table[row][j] = num[j-1]; 
 		}
 	}
 	

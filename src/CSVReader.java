@@ -2,20 +2,19 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class CSVReader {
-String[] countryNames;
-int[] yearLabels;
-double[][] cellularDatatables;
-Scanner scan;
+	private String[] countryNames;
+	private int[] yearLabels;
+	private double[][] cellularDatatables;
+	Scanner scan;
 
 //throws FileNotFoundException
 public CSVReader(String filename) { 
     try {
     java.io.File file = new java.io.File(filename);
-    scan = new Scanner(file);
+    Scanner scan = new Scanner(file);
     scan.nextLine();
     String numLine = scan.nextLine();
     final int n = Integer.parseInt(numLine.split(",")[1]); //Number is the string portion after the first comma
-
     //Allocate arrays with length n
     countryNames = new String[n];
     cellularDatatables = new double[n][];
@@ -26,7 +25,7 @@ public CSVReader(String filename) {
     yearLabels = new int[m];
     for(int i=0;i<m;i++)
     {
-    yearLabels[i] = Integer.parseInt(yearHeaders[i+1]); //i+1 to skip the first entry in the string arr
+    this.yearLabels[i] = Integer.parseInt(yearHeaders[i+1]); //i+1 to skip the first entry in the string arr
     }
 
    //Now read until we run out of lines - put the first in country names and the rest in the table
@@ -38,7 +37,7 @@ public CSVReader(String filename) {
      cellularDatatables[c] = new double[m];
      for(int i = 0; i < m; i++)
      {
-         cellularDatatables[c][i] = Double.parseDouble(inputArr[i+1]);
+         this.cellularDatatables[c][i] = Double.parseDouble(inputArr[i+1]);
        }
     }
         scan.close();
