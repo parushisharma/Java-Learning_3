@@ -20,12 +20,15 @@ public class CellularData {
 	public void addCountry(String country, double []num) {
 		for(int i = 0; i<table.length;i++) { // read through the table    
 			if(table[i][0] == null) {    // create check to see if the first row is empty
-				addCountryHelper(country, num, i);  //inserts the data by using helper method 
-				break;
+				//table[i][0] = country;
+				for ( int j = 1; j < table[i].length; j++) {
+					this.table[i][j] = num[j-1];
+				}
+				break; 
 			}
 		}
 	}
-	
+	/*
 	// This is a helper method that is private to the client. 
 	// It inserts the data into the table
 	private void addCountryHelper(String country, double []num, int row) {
@@ -34,7 +37,7 @@ public class CellularData {
 			this.table[row][j] = num[j-1]; 
 		}
 	}
-	
+	*/
 	// This method first checks the name of the country given and the names of the country in the table
 	// then proceeds to find the index of the starting/ending year given by the test file to find the sum 
 	// of the subscriptions of the proper country's subscriptions  in the proper years. 
