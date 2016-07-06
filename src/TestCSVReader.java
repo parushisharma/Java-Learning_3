@@ -40,7 +40,7 @@ public class TestCSVReader
 		
 
 		datatable = new CellularData(numRows, numColumns, startingYear);
-		System.out.print(datatable);
+		
 
 		// From the array that stores parsed information,
 		// add one country at a time to an object of type CellularData.
@@ -63,7 +63,13 @@ public class TestCSVReader
 
 
         // TODO: For full credit, include test cases in addition to those provided.
+		System.out.printf(countryNames[0] + " (1960 to 1980): %.2f \n", datatable.getNumSubscriptionsInCountryForPeriod(countryNames[0],1960,1980));
+		
+		System.out.printf(countryNames[100] + " (1960 to 1980): %.2f \n", datatable.getNumSubscriptionsInCountryForPeriod(countryNames[100],1960,1980));
+		
+		System.out.printf(countryNames[200] + " (1960 to 1980): %.2f \n", datatable.getNumSubscriptionsInCountryForPeriod(countryNames[200],1960,1980));
 		//
 		// TODO: Also, make sure to test for other invalid requests for range of years.
+		System.out.printf(countryNames[10] + " (1980 to 2160): %.2f \n", datatable.getNumSubscriptionsInCountryForPeriod(countryNames[10],1980,2160));
 	}
 }
