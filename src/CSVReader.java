@@ -30,36 +30,38 @@ public class CSVReader {
 	    				this.yearLabels[i] = Integer.parseInt(yearHeaders[i+1]); //i+1 to skip the first entry in the string array 
 	    			}
 	
-	    			//Now read until we run out of lines - put the first in country names and the rest in the table
-	    			int c = 0;
-	    			while(scan.hasNext()) {
-	    				String[] inputArr = scan.nextLine().split(",");
-	    				countryNames[c] = inputArr[0]; // fill in the countryNames Array 
-	    				cellularDatatables[c] = new double[m]; // fill in the CellularDatatables array 
+	    		//Now read until we run out of lines - put the first in country names and the rest in the table
+	    		int c = 0;
+	    		while(scan.hasNext()) {
+	    			String[] inputArr = scan.nextLine().split(",");
+	    			countryNames[c] = inputArr[0]; // fill in the countryNames Array 
+	    			cellularDatatables[c] = new double[m]; // fill in the CellularDatatables array 
 	    				for(int i = 0; i < m; i++) { 
 	    					cellularDatatables[c][i] = Double.parseDouble(inputArr[i+1]);
 	    				}
-	    			}
-	    			scan.close();
+	    		}
+	    			
 	    	}
+	    	scan.close();
 	    }
 	
 	    catch(FileNotFoundException e) {
 	        System.out.println(e.getMessage());
 	    }
 	}
+	
 	// This method returns the country names 
-	public String[] getCountryNames(){
+	public String[] getCountryNames() {
 		return this.countryNames;
 	}
 	    
 	// This method returns the getYearlabels 
-	public int[] getYearLabels(){
+	public int[] getYearLabels() {
 		return this.yearLabels;
 	}
 	    
 	// This method returns the cellularDatatables 
-	public double[][] getParsedTable(){
+	public double[][] getParsedTable() {
 		return this.cellularDatatables;
 	}
 	    
