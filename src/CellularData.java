@@ -30,16 +30,7 @@ public class CellularData {
 			}
 		}
 	}
-	/*
-	// This is a helper method that is private to the client. 
-	// It inserts the data into the table
-	private void addCountryHelper(String country, double []num, int row) {
-		table[row][0] = country; // the country name given should be in the 0th row. 
-		for(int j = 1;j < table[row].length;j++) { // read through the row 
-			this.table[row][j] = num[j-1]; 
-		}
-	}
-	*/
+	
 	// This method first checks the name of the country given and the names of the country in the table
 	// then proceeds to find the index of the starting/ending year given by the test file to find the sum 
 	// of the subscriptions of the proper country's subscriptions  in the proper years. 
