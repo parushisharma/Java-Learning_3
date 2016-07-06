@@ -37,7 +37,7 @@ public CSVReader(String filename) {
      cellularDatatables[c] = new double[m];
      for(int i = 0; i < m; i++)
      {
-         this.cellularDatatables[c][i] = Double.parseDouble(inputArr[i+1]);
+         cellularDatatables[c][i] = Double.parseDouble(inputArr[i+1]);
        }
     }
         scan.close();
@@ -49,16 +49,16 @@ public CSVReader(String filename) {
     }
 }
     public String[] getCountryNames(){
-        return countryNames;
+        return this.countryNames;
     }
     public int[] getYearLabels(){
-        return yearLabels;
+        return this.yearLabels;
     }
     public double[][] getParsedTable(){
-        return cellularDatatables;
+        return this.cellularDatatables;
     }
     public int getNumberOfYears()
     {
-        return yearLabels.length;
+        return this.yearLabels.length;
     }
 }

@@ -9,20 +9,22 @@ public class CellularData {
 		table = new Object[numRows+1][numColumns+1];
 		// Create header for country 
 		table[0][0] = "Country";
-		this.startingYear = year;
+		startingYear = year;
 		for(int i=1;i<=numColumns;i++) {
 			table[0][i] = year++;   //increments the year in the 0th row.
 		}
+		
 	}
 	
 	// this method adds the single array of data given by the user in the 
 	// test file into the double array created in the method above. 
 	public void addCountry(String country, double []num) {
+		
 		for(int i = 0; i<table.length;i++) { // read through the table    
 			if(table[i][0] == null) {    // create check to see if the first row is empty
-				//table[i][0] = country;
+				table[i][0] = country;
 				for ( int j = 1; j < table[i].length; j++) {
-					this.table[i][j] = num[j-1];
+					table[i][j] = num[j-1];
 				}
 				break; 
 			}
