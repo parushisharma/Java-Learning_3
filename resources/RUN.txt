@@ -1,4 +1,23 @@
 Output: 
-Exception in thread "main" java.lang.NullPointerException
-	at CellularData.addCountry(CellularData.java:27)
-	at TestCSVReader.main(TestCSVReader.java:49)
+Country is "Aruba", subscriptions from 1960 to 2012
+the output is:
+Aruba (1960 to 2012): 1170.50 
+Country is "Hungary", subscriptions from 1960 to 2012
+the output is:
+Hungary (1960 to 2012): 1246.58 
+Country is "Singapore", subscriptions from 1960 to 2012
+the output is:
+Singapore (1960 to 2012): 1582.80 
+Country is "Aruba", subscriptions from 1960 to 1980
+the output is:
+Aruba (1960 to 1980): 0.00 
+Country is "Hungary", subscriptions from 1960 to 1980
+the output is:
+Hungary (1960 to 1980): 0.00 
+Country is "Singapore", subscriptions from 1960 to 1980
+the output is:
+Singapore (1960 to 1980): 0.00 
+Country is "Antigua and Barbuda", subscriptions from 1980 to 2160
+the output is:
+ERROR : requested year 1980 from Antigua and Barbuda is less than starting year 1960
+Antigua and Barbuda (1980 to 2160): -1.00 
