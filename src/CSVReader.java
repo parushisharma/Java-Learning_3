@@ -39,7 +39,9 @@ public class CSVReader {
 	    				for(int i = 0; i < m; i++) { 
 	    					cellularDatatables[c][i] = Double.parseDouble(inputArr[i+1]);
 	    				}
+	    				c++;
 	    		}
+	    		
 	    			
 	    	}
 	    	scan.close();
