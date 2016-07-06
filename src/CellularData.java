@@ -6,9 +6,9 @@ public class CellularData {
 	// This method initializes the datatable/ header that contains the year. 
 	public CellularData(int numRows, int numColumns, int year) {
 		// create object with header. 
-		table = new Object[numRows+1][numColumns+1];
+		this.table = new Object[numRows+1][numColumns+1];
 		// Create header for country 
-		table[0][0] = "Country";
+		this.table[0][0] = "Country";
 		startingYear = year;
 		for(int i=1;i<=numColumns;i++) {
 			table[0][i] = year++;   //increments the year in the 0th row.
